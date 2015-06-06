@@ -1,0 +1,22 @@
+# Config file for automatic testing at travis-ci.org
+
+language: python
+# http://blog.travis-ci.com/2014-12-17-faster-builds-with-container-based-infrastructure/
+sudo: false
+
+python:
+    - "3.4"
+    - "3.3"
+    - "2.7"
+    - "2.6"
+    - "pypy"
+
+install:
+    - pip install -U -r dev-requirements.txt
+    - pip install -U .
+
+before_script: flake8 webargs-marshmallow
+
+script: py.test
+
+
