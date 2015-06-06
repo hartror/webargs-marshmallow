@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask
 from marshmallow import Schema, fields
 import pytest
 from webargs.flaskparser import FlaskParser

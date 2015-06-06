@@ -1,8 +1,6 @@
 """
 """
 
-import functools
-
 from webargs import Arg
 
 
@@ -18,17 +16,11 @@ class SchemaParserMixin(object):
             (name, _to_arg(field))
             for name, field in schema.fields.items())
 
-        print argmap
-
         parsed = (
             super(SchemaParserMixin, self)
             .parse(argmap, req, locations, validate, force_all))
 
-        print parsed
-
         result = schema.load(parsed)
-
-        print result.data
 
         # TODO: handle error
         return result.data
