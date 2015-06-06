@@ -36,7 +36,7 @@ def read(fname):
     return content
 
 setup(
-    name='webargs',
+    name='webargs_marshmallow',
     version=__version__,
     description=(
         'webargs-marshmallow provides a webargs parser that understands '
