@@ -39,4 +39,4 @@ def test_app():
 def test_parsing_get_args(test_app):
     test_client = test_app.test_client()
     res = test_client.get('/?name=world')
-    assert res.data == "Hello world"
+    assert res.data.decode("utf-8") == "Hello world"
