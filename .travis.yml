@@ -15,6 +15,6 @@ install:
     - pip install -U -r dev-requirements.txt
     - pip install -U .
 
-before_script: flake8 webargs-marshmallow
+before_script: flake8 webargs_marshmallow
 
 script: py.test
