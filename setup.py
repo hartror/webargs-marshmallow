@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
 # Requirements
-requires = [
+REQUIREMENTS = [
     'marshmallow>=2.0.0b2',
     'webargs>=0.13.0'
 ]
@@ -25,6 +25,7 @@ def find_version(fname):
     if not version:
         raise RuntimeError('Cannot find version information')
     return version
+
 
 __version__ = find_version("webargs_marshmallow/__init__.py")
 
